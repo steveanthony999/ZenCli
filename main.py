@@ -1,35 +1,13 @@
 from user import User
+import intro
 
 
 def main():
     users = {}
     current_user = None
+    intro.welcome()
 
     while True:
-        print(
-            """
-              
-.-. . .-..----..-.    .---.  .----. .-.   .-..----.    .---.  .----. 
-| |/ \| || {_  | |   /  ___}/  {}  \|  `.'  || {_     {_   _}/  {}  \\
-|  .'.  || {__ | `--.\     }\      /| |\ /| || {__      | |  \      /
-`-'   `-'`----'`----' `---'  `----' `-' ` `-'`----'     `-'   `----' 
-"""
-        )
-        print(
-            """
-              
-  ____..--'     .-''-.   ,---.   .--.     _______      .---.      .-./`)  
- |        |   .'_ _   \  |    \  |  |    /   __  \     | ,_|      \ .-.') 
- |   .-'  '  / ( ` )   ' |  ,  \ |  |   | ,_/  \__)  ,-./  )      / `-' \ 
- |.-'.'   / . (_ o _)  | |  |\_ \|  | ,-./  )        \  '_ '`)     `-'`"` 
-    /   _/  |  (_,_)___| |  _( )_\  | \  '_ '`)       > (_)  )     .---.  
-  .'._( )_  '  \   .---. | (_ o _)  |  > (_)  )  __  (  .  .-'     |   |  
-.'  (_'o._)  \  `-'    / |  (_,_)\  | (  .  .-'_/  )  `-'`-'|___   |   |  
-|    (_,_)|   \       /  |  |    |  |  `-'`-'     /    |        \  |   |  
-|_________|    `'-..-'   '--'    '--'    `._____.'     `--------`  '---'  
-                                                                          
-"""
-        )
         print("\nOptions:")
         print("1. Register")
         print("2. Login")
@@ -37,7 +15,9 @@ def main():
             print("3. Create Journal Entry")
             print("4. View Journal Entries")
             print("5. Logout")
-        print("6. Exit")
+            print("6. Exit")
+        else:
+            print("3. Exit")
 
         choice = input("\nEnter your choice: ")
 
@@ -59,8 +39,12 @@ def main():
             else:
                 print("Invalid username or password!")
 
-        elif choice == "3" and current_user:
-            print("Journal entry coming soon")
+        elif choice == "3":
+            if current_user:
+                print("Journal entry coming soon")
+            else:
+                print("Goodbye!")
+                break
             # entry = input("Enter your journal entry: ")
             # if not current_user.journals:
             #     current_user.create_journal()
