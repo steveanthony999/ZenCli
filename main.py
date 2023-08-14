@@ -28,7 +28,9 @@ def main():
                 continue
             password = input("Enter password: ")
             users[username] = User(username, password)
+            current_user = users[username]
             print(f"User {username} registered successfully!")
+            print(f"Logged in as {username}!")
 
         elif choice == "2":
             username = input("Enter username: ")
