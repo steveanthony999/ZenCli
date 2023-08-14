@@ -14,27 +14,39 @@ Discover the joy of journaling with **ZenCli**, where every word nurtures your g
 
 **Clone the Repository**:
 Open your terminal or command prompt and run the following command to clone the ZenCLI repository:
-`bash`
+
+```bash
 git clone https://github.com/steveanthony999/zencli.git
+```
 
 **Navigate to the ZenCLI Directory:**
-`bash`
+
+```bash
 cd zencli
+```
 
 **(Optional) Create a Virtual Environment:**
 It's a good practice to use a virtual environment to avoid potential conflicts with other Python packages.
-`bash`
+
+```bash
 python -m venv zencli_env
+```
 
 **Activate the Virtual Environment:**
 On Windows:
-`bash`
+
+```bash
 .\zencli_env\Scripts\activate
+```
 
 On macOS and Linux:
-`bash`
+
+```bash
 source zencli_env/bin/activate
+```
 
 **Run ZenCLI:**
-`bash`
+
+```bash
 python main.py
+```
