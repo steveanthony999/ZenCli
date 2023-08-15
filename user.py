@@ -1,6 +1,7 @@
 import hashlib
 import csv
 import os
+from garden import Garden
 
 
 class User:
@@ -10,6 +11,7 @@ class User:
         self.username = username
         self._password_hash = password_hash
         self.journals = []
+        self.garden = Garden(self.username)
 
     @classmethod
     def register(cls, username, password):

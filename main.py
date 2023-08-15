@@ -42,14 +42,28 @@ def main():
                         print("Plant a new seed logic coming soon")
                         pass
                     elif zen_choice == "2":
+                        zen_health = current_user.garden.calculate_score()
+                        print("Zen Garden Health:")
+                        print("Plants In Progress:", zen_health["In Progress"])
+                        print("Plants In Final Garden:", zen_health["Final Garden"])
+                        print("Plants In Trash:", zen_health["Trash"])
+                        pass
+                    elif zen_choice == "3":
                         break
                     # Add other Zen Garden options here
                     else:
                         print("Invalid choice. Please try again.")
             elif choice == "7":
+                zen_health = current_user.garden.calculate_score()
+                print("Zen Garden Health:")
+                print("Plants In Progress:", zen_health["In Progress"])
+                print("Plants In Final Garden:", zen_health["Final Garden"])
+                print("Plants In Trash:", zen_health["Trash"])
+                pass
+            elif choice == "8":
                 current_user = None
                 print("Logged out successfully!")
-            elif choice == "8":
+            elif choice == "9":
                 print("Goodbye!")
                 break
             else:
